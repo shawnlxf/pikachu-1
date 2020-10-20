@@ -7,8 +7,8 @@ const player = {
     n: 1,
     interval: 100,
     ui: {
-        demo : document.querySelector("#demo"),
-        demo2 : document.querySelector("#demo2")
+        demo: document.querySelector("#demo"),
+        demo2: document.querySelector("#demo2")
 
     },
     events: {
@@ -45,6 +45,7 @@ const player = {
         player.ui.demo.scrollTop = player.ui.demo.scrollHeight;
     },
     play: () => {
+        window.clearInterval(player.id)
         player.id = setInterval(player.run, player.interval);
     },
     pause: () => {
